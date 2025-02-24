@@ -175,7 +175,7 @@ function flib_prototypes.find(base_type, name)
   for derived_type in pairs(defines.prototypes[base_type]) do
     local prototypes = data.raw[derived_type]
     if prototypes then
-      local prototype = data.raw[derived_type][name]
+      local prototype = prototypes[name]
       if prototype then
         return prototype
       end
